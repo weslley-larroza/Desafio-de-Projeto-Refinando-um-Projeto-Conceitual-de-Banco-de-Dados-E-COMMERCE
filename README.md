@@ -1,5 +1,3 @@
-Para o seu README no GitHub, aqui está uma descrição profissional, direta e impactante:
-
 🛒 E-Commerce ERP: Gestão de Inventário e Vendas
 Este projeto apresenta um modelo de banco de dados relacional (EER) refinado para um ecossistema de e-commerce completo. A arquitetura foi projetada para ir além do simples registro de pedidos, integrando fluxos de ERP (Enterprise Resource Planning) para controle rigoroso de estoque e faturamento diferenciado.
 
