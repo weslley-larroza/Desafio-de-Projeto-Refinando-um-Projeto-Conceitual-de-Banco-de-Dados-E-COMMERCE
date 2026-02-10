@@ -1,21 +1,26 @@
-Entrada de Materiais: Você apenas atualiza o quantidade_estoque na tabela Produto.
+Para o seu README no GitHub, aqui está uma descrição profissional, direta e impactante:
 
-Ciclo de Venda:
+🛒 E-Commerce ERP: Gestão de Inventário e Vendas
+Este projeto apresenta um modelo de banco de dados relacional (EER) refinado para um ecossistema de e-commerce completo. A arquitetura foi projetada para ir além do simples registro de pedidos, integrando fluxos de ERP (Enterprise Resource Planning) para controle rigoroso de estoque e faturamento diferenciado.
 
-Ao inserir um item em Pedido_Item, o Trigger TRG_Reserva_Ao_Inserir aumenta a reserva.
+🔹 Destaques da Implementação:
+Especialização Disjunta (PF/PJ): Estrutura de herança que garante a separação total entre perfis de Pessoa Física e Jurídica, impedindo a sobreposição de dados fiscais na mesma conta.
 
-Ao consultar a View vw_estoque_disponivel, o sistema já desconta o que está reservado, evitando vender o que não tem.
+Gestão de Estoque por Estados: Controle avançado de inventário segmentado em:
 
-Expedição:
+Físico: Total presente no armazém.
 
-Ao alterar o status do Pedido para 'Enviado', o Trigger TRG_Baixa_Estoque_Final remove a quantidade tanto da reserva quanto do estoque físico.
+Reservado: Produtos em pedidos ativos (prevenção de overbooking).
 
-Especialização: As FKs em Pessoa_Fisica e Pessoa_Juridica garantem que os dados herdem a estrutura de Cliente.
+Bloqueado: Itens com avarias ou em quarentena.
 
-Com esse script no seu GitHub, você demonstra domínio sobre:
+Automação via Triggers: Lógica de negócio implementada diretamente no banco de dados para realizar reservas automáticas no momento da compra e baixa definitiva apenas no envio logístico.
 
-Modelagem EER (Herança e Relacionamentos).
+Logística Integrada: Módulo de entrega com rastreabilidade única e controle de status em tempo real.
 
-Lógica de ERP (Gestão de Estoque complexa).
+🛠️ Tecnologias Utilizadas:
+Modelo: EER (Entidade-Relacionamento Estendido)
 
-Programação em Banco de Dados (Triggers e Views).
+Linguagem: SQL (MySQL/MariaDB)
+
+Paradigma: Orientação a Objetos aplicada a Dados (Herança)
