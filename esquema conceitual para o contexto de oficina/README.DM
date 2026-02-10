@@ -1,1 +1,8 @@
-🛠️ Entidades e Atributos PrincipaisCliente: id_cliente, nome, CPF/CNPJ, contato, endereço.Veículo: id_veiculo, placa, modelo, marca, ano. (Relacionado ao Cliente).Equipe de Mecânicos: id_equipe, nome_equipe. (Entidade agregadora para os mecânicos).Mecânico: codigo_mecanico, nome, endereço, especialidade.Ordem de Serviço (OS): numero_os, data_emissao, valor_total, status, data_conclusao.Serviço: id_servico, descrição, valor_mao_de_obra (baseado na tabela de referência).Peça: id_peca, nome_peca, valor_unitario.⛓️ Relacionamentos e Regras de NegócioCliente possui Veículo: Um cliente pode ter vários veículos, mas um veículo pertence a um cliente ($1:N$).Equipe avalia Veículo: Uma equipe é designada para o veículo para gerar a OS.Composição da Equipe: Uma equipe é formada por vários mecânicos ($N:M$).Composição da OS (Itens): * A OS contém vários Serviços ($N:M$, gerando a tabela Itens_Servico).A OS contém várias Peças ($N:M$, gerando a tabela Itens_Peca).Autorização: A OS só avança para o status "Execução" após a autorização do cliente.
+Entidades e Atributos Principais
+Cliente: id_cliente, nome, CPF/CNPJ, contato, endereço.
+Veículo: id_veiculo, placa, modelo, marca, ano. (Relacionado ao Cliente).
+Equipe de Mecânicos: id_equipe, nome_equipe. (Entidade agregadora para os mecânicos).
+Mecânico: codigo_mecanico, nome, endereço, especialidade.
+Ordem de Serviço (OS): numero_os, data_emissao, valor_total, status, data_conclusao.
+Serviço: id_servico, descrição, valor_mao_de_obra (baseado na tabela de referência).
+Peça: id_peca, nome_peca, valor_unitario.
